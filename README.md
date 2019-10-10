@@ -47,7 +47,7 @@ Used to pass into the Invoke-Command function for gathering process information.
 
   ## **-BatchSize**
 
-> ![Foo](https://img.shields.io/badge/Type-Int32-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-FALSE-Green?) ![Foo](https://img.shields.io/badge/DefaultValue-[int]$env:NUMBER_OF_PROCESSORS + 1-Blue?color=5547a8)\
+> ![Foo](https://img.shields.io/badge/Type-Int32-Blue?) ![Foo](https://img.shields.io/badge/Mandatory-FALSE-Green?) ![Foo](https://img.shields.io/badge/DefaultValue-%5Bint%5D%24env%3ANUMBER__OF__PROCESSORS%20%2B%201-Blue?color=5547a8)\
 Used for the runspace pooling that is utilized for more efficient parallel processing. This is exposed so that you have flexibility for runspace behavior.  Default value is calculated from: [int]$env:NUMBER_OF_PROCESSORS + 1
 
   ## **-ApartmentState**
