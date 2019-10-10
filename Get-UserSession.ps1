@@ -77,7 +77,7 @@ Function Get-UserSession
         [switch]$UseSSL
         ,
         [Parameter(ParameterSetName = 'ProcessInfo')]
-        [Microsoft.WSMan.Management.AuthenticationMechanism]$Authentication
+        [System.Management.Automation.Runspaces.AuthenticationMechanism]$Authentication
         ,
         [Parameter(ParameterSetName = 'ProcessInfo')]
         [System.Management.Automation.Remoting.PSSessionOption]$SessionOption
@@ -365,6 +365,7 @@ Function Get-UserSession
             }
 
             # Run Invoke-Command to get the process information after building a splat with all necessary parameters
+            Write-Verbose -Message "Running Invoke-Command with specified parameters to gather process information" -Verbose:$verbose
             $UserProcesses = Invoke-Command @InvokeCommandSplat
 
         }
